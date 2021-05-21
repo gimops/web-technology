@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script language="JavaScript">
+		$(document).ready(function(){
+			$("#up").click(function(){
+				$("#move").animate({top: "-=100"}, 1000, "linear");
+			});
+			$("#left").click(function(){
+				$("#move").animate({left: "-=100"}, 1000, "linear");
+			});
+			$("#right").click(function(){
+				$("#move").animate({left: "+=100"}, 1000, "linear");
+			});
+			$("#down").click(function(){
+				$("#move").animate({top: "+=100"}, 1000, "linear");			
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+		<h1>Задание №3.</h1>
+		<a href="lab2.html">Назад</a><br>
+		<button id="up">Вверх</button>
+		<button id="down">Вниз</button>
+		<button id="left">Влево</button>
+		<button id="right">Вправо</button>
+
+		<div id="move"></div>
+
+	</div>
+</body>
+</html>

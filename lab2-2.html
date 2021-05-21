@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script language="JavaScript">
+		$(document).ready(function(){
+			$("#send_form").click(function () {
+
+				var name = document.getElementById("name");
+				var password = document.getElementById("password");
+				var password2 = document.getElementById("password2");
+				var email = document.getElementById("email");
+				var theme = document.getElementById("theme");
+				var message = document.getElementById("message");
+
+				if (name.value == "") {
+					alert("Введите имя");
+					$("#name").css("border", "1px solid red");			
+				}else{
+					$("#name").css("border", "1px solid #000");			
+				}
+				if (password.value == "") {
+					alert("Укажите пароль");
+					$("#password").css("border", "1px solid red");			
+				}else{
+					if (password.value.length <= 4) {
+						alert("Пароль должен быть длинее 4 символов");
+						$("#password").css("border", "1px solid red");	
+					}else{
+						$("#password").css("border", "1px solid #000");	
+					}		
+				}
+				if (password2.value == "") {
+					alert("Вы должны повторно ввести пароль");
+					$("#password2").css("border", "1px solid red");			
+				}else{
+					if (password2.value != password.value) {
+						alert("Пароли должны совпадать");
+						$("#password2").css("border", "1px solid red");	
+					}else{
+						$("#password2").css("border", "1px solid #000");	
+					}		
+				}
+				if (email.value == "") {
+					alert("Заполните поле Email");
+					$("#email").css("border", "1px solid red");			
+				}else{
+					if (!email.value.includes("@", 1)) {
+						alert("Укажите правильный адрес почты");
+						$("#email").css("border", "1px solid red");	
+					}else{
+						$("#email").css("border", "1px solid #000");	
+					}		
+				}
+				if (theme.value == "") {
+					alert("Вы не указали тему сообщения");
+					$("#theme").css("border", "1px solid red");	
+				}else{
+					$("#theme").css("border", "1px solid #000");		
+				}
+				if (message.value == "") {
+					alert("Сообщение не может быть пустым");
+					$("#message").css("border", "1px solid red");			
+				}else{
+					if (message.value.length <= 10) {
+						alert("Сообщение короче 10 символов");
+						$("#message").css("border", "1px solid red");	
+					}else{
+						$("#message").css("border", "1px solid #000");	
+					}		
+				}
+			});
+			$("#reset_form").click(function () {
+				$("input[type=text]").css("border", "1px solid #000");
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+		<h1>Задание №2.</h1>
+		<form name="blank">
+			Имя: 
+			<br> 
+			<input id="name" type = "text"  name = "firstname">
+			<br><br>
+			Пароль: 
+			<br> 
+			<input id="password" type = "text" name = "password"> 
+			<br><br>
+			Введите пароль еще раз: 
+			<br> 
+			<input id="password2" type = "text"  name = "password2">
+			<br><br>
+			Email: 
+			<br> 
+			<input id="email" type = "text" name = "email"> 
+			<br><br>
+			Тема сообщения: 
+			<br> 
+			<input id="theme" type = "text"  name = "theme"> 
+			<br><br>
+			Сообщение: 
+			<br> 
+			<input id="message" type = "text" name = "message">
+			<br><br>
+			<input type="button" id="send_form" class="button" value="Отправить">
+			<input type="reset" id="reset_form" class="button" value="Очистить">
+		</form>
+
+		<br><a href="lab2.html">Назад</a>
+	</div>
+</body>
+</html>

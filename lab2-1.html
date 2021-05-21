@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<link rel="stylesheet" href="style2-1.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script language="JavaScript">
+		$(document).ready(function(){
+			var colors = ["#FC6BCB","#9A63C8","#22AFF0","#70F8BA","#CDF181","#F19512","#F16A6A"]
+			$("#cvet").click(function () {
+				var cvet = Math.floor(Math.random()*7);
+				$(".main").css("background-color", colors[cvet]);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+		<h1>Задание №1.</h1>
+		<button id="cvet">Другой цвет фона</button>
+		<br><a href="lab2.html">Назад</a>
+	</div>
+</body>
+</html>

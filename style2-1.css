@@ -1,0 +1,30 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+html, body{
+	height: 100vh;	
+}
+body{
+	font-family: sans-serif;
+}
+.main{
+	height:inherit;
+	padding: 30px;
+	background-color: #AD75F2;
+}
+button{
+	color: #000;
+	background-color: #2ADC50;
+	border: 2px solid #000;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 18px;
+	margin: 50px 100px;
+}
+a{
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+}
