@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script language="JavaScript">
+		$(document).ready(function(){
+			$("#fury").mousedown(function(){
+				var x, y, x1, y1, x2, y2;
+				$("#fury").offset(function(i,val){
+					x = val.left;
+					y = val.top;
+					return {
+						top:val.top, 
+						left:val.left
+					};
+				});
+				x1 = event.pageX - x;
+				y1 = event.pageY - y;
+				$("#fury").addClass('fly');
+				$(document).mousemove(function ( event ){
+		    		x2 = event.pageX - x1;
+		    		y2 = event.pageY - y1;
+		    		$(".fly").animate({top: y2}, 0, "linear");
+		    		$(".fly").animate({left: x2}, 0, "linear");
+
+	 			});
+			});
+			$("#fury").mouseup(function( event ){
+    			$("#fury").removeClass('fly');
+	 		});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+		<h1>Задание №5.</h1>
+			<div id="fury"></div>
+		<br><a href="lab2.html">Назад</a>
+	</div>
+</body>
+</html>

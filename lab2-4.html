@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<link rel="stylesheet" href="style2.css">
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script language="JavaScript">
+		$(document).ready(function(){
+			$( document ).mousemove(function( event ){
+		    	$( ".main div:first" ).text( "X: " + event.pageX );
+		    	$( ".main div:last" ).text( "Y: " + event.pageY );
+	 		});
+		});
+	</script>
+</head>
+<body>
+
+	<div class="main">
+		<h1>Задание №4.</h1>
+		<p>Координаты мыши:</p>
+		<div></div>
+		<div></div>
+		<br><a href="lab2.html">Назад</a>
+	</div>
+	
+</body>
+</html>

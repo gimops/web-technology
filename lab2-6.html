@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Гимаева Галия</title>
+<link rel="stylesheet" href="style2.css">
+<script type="text/javascript" src="jquery.js"></script>
+
+<script language="JavaScript">
+	$(document).ready(function(){
+		var answers = [0,0,0,0];
+		var all = 0;
+		var percent = [0,0,0,0];
+		$("#send").click(function () {
+			test();
+		});
+
+		function test() {
+			if (document.getElementById("rad1").checked) {answers[0]++;all++;}
+			if (document.getElementById("rad2").checked) {answers[1]++;all++;}
+			if (document.getElementById("rad3").checked) {answers[2]++;all++;}
+			if (document.getElementById("rad4").checked) {answers[3]++;all++;}
+			for (var i = 0; i <= answers.length - 1; i++) {
+				percent[i] = Math.round((answers[i]*100)/all);
+			}
+			if (all == 0) {percent = [0,0,0,0]}
+			alert("1–– " + percent[0] + 
+				"% \n2 –– " + percent[1] + 
+				"% \n3 –– " + percent[2] + 
+				"% \nГотовят документы на отчисление –– " + percent[3] + "%");
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="main">
+		<h1>Задание №6.</h1>
+		<p>Сколько предметов вам осталось закрыть?</p>
+		<p>	
+			<br>
+			<input type="radio" id="rad1" name="rad">1
+			<br><br>
+			<input type="radio" id="rad2" name="rad">2
+			<br><br>
+			<input type="radio" id="rad3" name="rad">3
+			<br><br>
+			<input type="radio" id="rad4" name="rad">Готовлю документы на отчисление
+			<br><br>
+		</p>
+		<div id="send">Узнать результаты</div>
+		<br><a href="lab2.html">Назад</a>
+	</div>
+</body>
+</html>
