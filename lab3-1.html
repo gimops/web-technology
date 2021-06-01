@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Гимаева Галия</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<h4>Лабораторная работа №3</h4>
+<h4>Задание 1</h4>
+<h3 style="background-color: aquamarine;">«Я из тех, кто не сдается»</h3>
+<p>Удивительные истории россиян, изменивших жизнь с помощью бега</p>
+<img src="https://icdn.lenta.ru/images/2021/05/12/14/20210512142459062/top7_36f678428d57f9626ce4d2e01e5470f1.jpg" alt="" width="500px"><br>
+<br><br>
+<h3 style="background-color: aquamarine;">«Он разрушил свою жизнь»</h3>
+<p>Нападающего сборной СССР называли самым хитрым хоккеистом мира. Почему он умер в нищете?</p>
+<img src="https://icdn.lenta.ru/images/2021/05/24/13/20210524135816115/top7_6864156f9570e849ec9c01b736c8ed62.jpg" alt="" width="500px"><br>
+<br><br>
+<h3 style="background-color: aquamarine;">Что изменится в жизни россиян с 1 июня</h3>
+<p>Закон о просвещении, запрет на экспорт гречки и разморозка цен</p>
+<img src="https://icdn.lenta.ru/images/2021/05/31/16/20210531162727464/top7_65b1e3e4aa4368c1955dfc389bb998a5.jpg" alt="" width="500px"><br>
+<br><br>
+<h3 style="background-color: aquamarine;">Рожки да ножки</h3>
+<p>«Рик и Морти», женщины-убийцы и рогоносец: главные сериалы июня</p>
+<img src="https://icdn.lenta.ru/images/2021/05/31/15/20210531154022002/top7_13960ce753477e2f49cad44af5d248dc.jpg" alt="" width="500px"><br>
+<br> <br>
+<h3 style="background-color: aquamarine;">Поймут только северяне</h3>
+<p>Реки на Севере взрываются огромными глыбами льда. Россияне ждали этого весь год</p>
+<img src="https://icdn.lenta.ru/images/2021/06/01/11/20210601115410020/top7_84e12673064ff5a8fbef899d2c7c1289.jpg" alt="" width="500px"><br>
+<br> <br>
+</div>
+<script type="text/javascript">
+	let tek = 5;
+			function fff(str) {
+				if (str.length==0) {
+    document.getElementById("op").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  } else {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("op").innerHTML=this.responseText;
+    }
+  }
+			   xmlhttp.open("GET","get.php?tek="+tek,true);
+			   xmlhttp.send();
+			   tek+=5;
+			}
+		 </script>
+	<span id = "op"></span>
+	<form>
+		<input onclick = "fff(this.value)" type="button" value="загрузить" id="b">
+	</form>
+</body>
+</html>
